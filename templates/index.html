@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Startup Status Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        input, button {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Startup Prediction</h2>
+
+    <form action="/predict" method="post">
+        <input type="number" step="any" name="age_first_funding_year" placeholder="Age First Funding Year" required>
+        <input type="number" step="any" name="age_last_funding_year" placeholder="Age Last Funding Year" required>
+        <input type="number" step="any" name="age_first_milestone_year" placeholder="Age First Milestone Year" required>
+        <input type="number" step="any" name="age_last_milestone_year" placeholder="Age Last Milestone Year" required>
+        <input type="number" step="any" name="relationships" placeholder="Relationships" required>
+        <input type="number" step="any" name="funding_rounds" placeholder="Funding Rounds" required>
+        <input type="number" step="any" name="funding_total_usd" placeholder="Funding Total USD" required>
+        <input type="number" step="any" name="milestones" placeholder="Milestones" required>
+        <input type="number" step="any" name="avg_participants" placeholder="Avg Participants" required>
+
+        <button type="submit">Predict</button>
+    </form>
+</div>
+
+</body>
+</html>
